@@ -1,0 +1,49 @@
+{
+  "name": "notification-micro-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/obafemi-i/notification-microService.git",
+  "author": "obafemi-i <obaff76@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "js:produce": "nodemon -r tsconfig-paths/register ./dist/produce.js",
+    "js:consume": "node -r tsconfig-paths/register ./dist/consume.js",
+
+    "ts:prod": "nodemon -r tsconfig-paths/register ./src/produce.ts",
+    "ts:cons": "ts-node -r tsconfig-paths/register ./src/consume.ts",
+
+    "compile": "tsc --build",
+    "compile:watch": "tsc --build --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check **/*.ts",
+    "prettier:fix": "prettier --write **/*.ts"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^20.3.3",
+    "@types/twilio": "^3.19.3",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^36.0.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "@types/joi": "^17.2.3",
+    "dotenv": "^16.3.1",
+    "joi": "^17.9.2",
+    "kafkajs": "^2.2.4",
+    "twilio": "^4.13.0"
+  }
+}
